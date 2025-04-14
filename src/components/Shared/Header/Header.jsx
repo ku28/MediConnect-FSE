@@ -44,9 +44,8 @@ const Header = () => {
 
     const content = (
         <div className='nav-popover'>
-            <div className='my-2'>
-                <h5 className='text-capitalize'>{data?.firstName + ' ' + data?.lastName}</h5>
-                <p className='my-0'>{data?.email}</p>
+            <div className='my-3 px-5 flex align-items-center'>
+                <h5 className='text-capitalize m-0'>{data?.firstName + ' ' + data?.lastName}</h5>
                 <Link to="/dashboard" style={{ color: '#50C878' }}>Dashboard</Link>
             </div>
             <Button variant="outline-danger" className='w-100 logout-button' size="sm" onClick={hanldeSignOut}>

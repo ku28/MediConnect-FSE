@@ -132,41 +132,6 @@ const DoctorProfileSetting = () => {
             </div>
           </div>
 
-          {/* Biography */}
-          <div className="col-md-12">
-            <div className="card mb-2 mt-2">
-              <div className="card-body">
-                <h6 className="card-title text-secondary">About Me</h6>
-                <div className="form-group mb-2 card-label">
-                  <label>Biography</label>
-                  <textarea defaultValue={data?.biography} {...register("biography")} className="form-control" rows={5} />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Clinic Info */}
-          <div className="col-md-12">
-            <div className="card mb-2 p-3 mt-2">
-              <h6 className="card-title text-secondary">Clinic Info</h6>
-              <div className="row form-row">
-                <div className="col-md-6">
-                  <div className="form-group mb-2 card-label">
-                    <label>Clinic Name</label>
-                    <input defaultValue={data?.clinicName} {...register("clinicName")} className="form-control" />
-                  </div>
-                </div>
-
-                <div className="col-md-6">
-                  <div className="form-group mb-2 card-label">
-                    <label>Clinic Address</label>
-                    <input defaultValue={data?.clinicAddress} {...register("clinicAddress")} className="form-control" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Contact Details */}
           <div className="col-md-12">
             <div className="card mb-2 p-3 mt-2">
@@ -225,32 +190,18 @@ const DoctorProfileSetting = () => {
             </div>
           </div>
 
-          {/* Services */}
-          <div className="col-md-12">
-            <div className="form-group mb-2 card-label">
-              <label>Specializations</label>
-              <Select
-                mode="multiple"
-                options={doctorSpecialistOptions}
-                value={selectedItems}
-                onChange={setSelectedItems}
-                style={{ width: '100%' }}
-              />
-            </div>
-          </div>
-
           {/* Save Changes Button */}
           <div className="d-flex justify-content-center my-3">
-              <Button
-                htmlType="submit"
-                type="primary"
-                size="large"
-                loading={isLoading}
-                disabled={isLoading ? true : false}
-              >
-                {isLoading ? 'Saving ...' : 'Save Changes'}
-              </Button>
-            </div>
+            <Button
+              htmlType="submit"
+              type="primary"
+              size="large"
+              loading={isLoading}
+              disabled={isLoading ? true : false}
+            >
+              {isLoading ? 'Saving ...' : 'Save Changes'}
+            </Button>
+          </div>
         </form>
       </div>
     </div>

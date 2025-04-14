@@ -2,7 +2,8 @@ import React from 'react'
 import './index.css';
 import img from '../../../images/chair.png'
 
-const Location = () => {
+const Location = ({data}) => {
+    if (!data) return null;
     return (
         <div className="location-list ">
             {
@@ -11,10 +12,10 @@ const Location = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="clinic-content">
-                                    <h4 className="clinic-name" style={{ color: '#50C878' }}><a href="#">Care Center</a></h4>
-                                    <p className="doc-speciality">MBBS</p>
+                                    <h4 className="clinic-name" style={{ color: '#50C878' }}><a href="#">{data.clinicName}</a></h4>
+                                    <p className="doc-speciality">{data?.specialization}</p>
                                     <div className="clinic-details mb-0">
-                                        <h5 className="clinic-direction"> <i className="fas fa-map-marker-alt"></i>India</h5>
+                                        <h5 className="clinic-direction"> <i className="fas fa-map-marker-alt"></i> {data?.clinicAddress}</h5>
                                         <button className="btn btn-primary mt-2 mb-3" style={{ backgroundColor: '#50C878', borderColor: 'transparent' }}>Get Directions</button>
                                         <ul>
                                             {

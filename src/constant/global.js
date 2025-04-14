@@ -38,6 +38,25 @@ export const doctorSpecialistOptions = doctorSpecialistArray.map(data => {
     }
 });
 
+export const doctorServicesArray = [
+    { id: 1, value: "Routine Health Check-ups" },
+    { id: 2, value: "Preventive Care" },
+    { id: 3, value: "Vaccinations", },
+    { id: 4, value: "Prescription Refills" },
+    { id: 5, value: "Health Counseling" },
+    { id: 6, value: "Chronic Disease Management" },
+    { id: 7, value: "Pediatrician" },
+    { id: 8, value: "Telemedicine Consultations" },
+    { id: 9, value: "Therapy Sessions" }
+]
+
+export const doctorServicesOptions = doctorServicesArray.map(data => {
+    return {
+        label: data.value,
+        value: data.value
+    }
+});
+
 export const doctorTimeSlot = [
     "08:00 AM",
     "08:30 AM",

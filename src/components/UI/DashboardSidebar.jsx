@@ -41,7 +41,7 @@ const DashboardSidebar = () => {
                             <div className='profile-details'>
                                 <h5 className='mb-0 text-center'>{data?.firstName + " " + data?.lastName}</h5>
                                 <div>
-                                    <p className="mb-0 text-center">{data?.services}</p>
+                                    <p className="mb-0 text-center">{data?.specialization}</p>
                                 </div>
                             </div>
                         </div>
@@ -112,12 +112,6 @@ const DashboardSidebar = () => {
                                     <span>Appointments</span>
                                 </NavLink>
                             </li>
-                            {/* <li>
-                                <NavLink to={'/dashboard/my-patients'} activeClassName="active" end>
-                                    <FaUserInjured className="icon" />
-                                    <span>My Patients</span>
-                                </NavLink>
-                            </li> */}
                             <li>
                                 <NavLink to={'/dashboard/prescription'} activeClassName="active" end>
                                     <FaUserInjured className="icon" />
@@ -136,28 +130,30 @@ const DashboardSidebar = () => {
                                     <span>Invoices</span>
                                 </NavLink>
                             </li>
-
                             <li>
                                 <NavLink to={'/dashboard/reviews'} activeClassName="active" end>
                                     <FaRegStar className="icon" />
                                     <span>Reviews</span>
                                 </NavLink>
                             </li>
-
                             <li>
                                 <NavLink to={'/dashboard/profile-setting'} activeClassName="active" end>
                                     <FaUserCog className="icon" />
                                     <span>Profile Settings</span>
                                 </NavLink>
                             </li>
-
+                            <li>
+                                <NavLink to={'/dashboard/about-me'} activeClassName="active" end>
+                                    <FaUserCog className="icon" />
+                                    <span>About Me</span>
+                                </NavLink>
+                            </li>
                             <li>
                                 <NavLink to={'/dashboard/blogs'} activeClassName="active" end>
                                     <FaBlog className="icon" />
                                     <span>Blogs (Will move to Admin)</span>
                                 </NavLink>
                             </li>
-
                             <li>
                                 <NavLink to={'/dashboard/change-password'} activeClassName="active" end>
                                     <FaLock className="icon" />

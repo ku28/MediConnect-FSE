@@ -11,6 +11,7 @@ import MyPatients from './components/Doctor/MyPatients/MyPatients';
 import Reviews from './components/Doctor/Reviews/Reviews';
 import Schedule from './components/Doctor/Schedule/Schedule';
 import ProfileSetting from './components/Doctor/ProfileSetting/ProfileSetting';
+import AboutMe from './components/Doctor/AboutMe/AboutMe';
 import ChangePassword from './components/Doctor/ChangePassword/ChangePassword';
 import AdminDashboard from './components/Admin/Dashboard/Dashboard';
 import AdminAppointments from './components/Admin/Appointments/Appointments';
@@ -59,6 +60,7 @@ function App() {
           <Route path='/dashboard/appointment/treatment/edit/:id' element={<TreatmentEdit />} />
           <Route path='/dashboard/change-password' element={<ChangePassword />} />
           <Route path='/dashboard/profile-setting' element={<ProfileSetting />} />
+          <Route path='/dashboard/about-me' element={<AboutMe />} />
           <Route path='/dashboard/favourite' element={<PatientFavouriteDoctor />} />
           <Route path='/dashboard/invoices' element={<DoctorInvoice />} />
         </Route>

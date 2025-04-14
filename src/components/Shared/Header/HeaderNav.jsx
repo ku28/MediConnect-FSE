@@ -31,7 +31,8 @@ const HeaderNav = ({ open, setOpen, isLoggedIn, data, avatar, content }) => {
                                 Doctors
                             </NavLink>
                         </li>
-                    )}                    <li><NavLink to={'/contact'} className={({ isActive }) => isActive ? "nav-link scrollto active" : ""}>Contact</NavLink></li>
+                    )}
+                    <li><NavLink to={'/contact'} className={({ isActive }) => isActive ? "nav-link scrollto active" : ""}>Contact</NavLink></li>
                     <li><NavLink to={'/blog'} className={({ isActive }) => isActive ? "nav-link scrollto active" : ""}>Blog</NavLink></li>
                     {!isLoggedIn && <li><Link to={'/login'} className="nav-link scrollto">Login</Link></li>}
                 </ul>
