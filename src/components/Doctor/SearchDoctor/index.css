@@ -1,0 +1,52 @@
+.doctor-card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+}
+
+.sidebar-content {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+}
+
+.doc-img-fluid img {
+  height: 200px;
+  width: 200px;
+  border: 10px solid #d3d3d3;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+
+.doc-info a {
+  color: #4CAF50 !important;
+  text-decoration: underline;
+}
+
+.doc-info a:hover {
+  color: #388E3C !important;
+  text-decoration: none;
+}
+
+.ant-btn-primary {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: #218838 !important;
+  border-color: #218838 !important;
+}
+
+.ant-slider-track {
+  background-color: #28a745 !important;
+}
+
+.ant-slider-handle {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.ant-slider-rail {
+  background-color: #e0e0e0 !important;
+}

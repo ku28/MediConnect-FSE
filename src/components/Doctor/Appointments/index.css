@@ -1,0 +1,157 @@
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  /* border: 1px solid gray; */
+  /* box-shadow: 0 0 0.5cm rgba(0,0,0,0.5); */
+  }
+  page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm; 
+  }
+  page[size="A4"][layout="portrait"] {
+  width: 29.7cm;
+  height: 21cm;  
+  }
+  @media print {
+  body, page {
+    margin: 0;
+    box-shadow: 0;
+  }
+  }
+
+  /* General Layout Styling */
+.page-container {
+  margin: 5rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header/Footer Adjustment */
+.header, .footer {
+  padding: 2rem 3rem;
+  background-color: #f8f9fae8;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #333333dd;
+}
+
+h6, p {
+  font-size: 1rem;
+}
+
+/* Section Styling */
+.section-title {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #0e783c;
+  text-align: center;
+}
+
+.section-content {
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor/Patient Info Card */
+.info-card {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffbc22;
+}
+
+.info-card .info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-card .info-text h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.info-card .info-text p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+/* Tags and Buttons Styling */
+.ant-tag {
+  font-size: 0.9rem;
+}
+
+button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0e783c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b82f7;
+}
+
+.print-btn {
+  padding: 0.6rem 1.5rem;
+  background-color: #34d398;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background-color: #10b981;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .page-container {
+  padding: 1rem;
+  margin: 2rem auto;
+  }
+
+  .info-card {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  }
+
+  .info-card img {
+  width: 60px;
+  height: 60px;
+  }
+
+  .info-card .info-text h5 {
+  font-size: 1rem;
+  }
+
+  .info-card .info-text p {
+  font-size: 0.8rem;
+  }
+}
