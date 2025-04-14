@@ -1,0 +1,9 @@
+node_modules/
+**/*.env
+prisma/migrations/
+.vercel
+dist/
+
+.env.production
+.env
+.vercel
