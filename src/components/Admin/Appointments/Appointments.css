@@ -1,0 +1,97 @@
+.dash-widget-icon {
+    align-items: center;
+    display: inline-flex;
+    font-size: 1.5rem;  /* Reduced font size for smaller icons */
+    height: 40px;  /* Reduced height to make the icon smaller */
+    justify-content: center;
+    line-height: 38px;  /* Adjusted line-height for proper alignment */
+    text-align: center;
+    width: 40px;  /* Adjusted width to make the icon smaller */
+    border: 3px solid;
+    border-radius: 50%;
+    padding: 18px;  /* Reduced padding for better fit */
+}
+
+.avatar-img {
+    height: 18px;  /* Reduced height of avatar image */
+    width: 18px;  /* Reduced width of avatar image */
+    object-fit: cover;
+}
+
+.table-avatar a {
+    font-size: 12px;  /* Reduced font size for better alignment */
+    text-decoration: none;
+    color: inherit;
+}
+
+.dash-count {
+    font-size: 16px;  /* Reduced font size */
+    margin-left: auto;
+}
+
+.dash-widget-info h3 {
+    margin-bottom: 8px;  /* Reduced bottom margin */
+}
+
+.dash-widget-header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 12px;  /* Reduced bottom margin */
+}
+
+.card-chart .card-body {
+    padding: 6px;  /* Reduced padding */
+}
+
+#morrisArea > svg, #morrisLine > svg {
+    width: 100%;
+}
+
+.activity-feed {
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.activity-feed .feed-item {
+    border-left: 2px solid #e4e8eb;
+    padding-bottom: 15px;  /* Reduced padding */
+    padding-left: 15px;  /* Adjusted padding for better alignment */
+    position: relative;
+}
+
+.activity-feed .feed-item:last-child {
+    border-color: transparent;
+    padding-bottom: 0;
+}
+
+.activity-feed .feed-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5px;  /* Adjusted position for smaller icon */
+    width: 10px;  /* Smaller dot */
+    height: 10px;  /* Smaller dot */
+    border-radius: 50%;
+    background-color: #177dff;
+}
+
+.activity-feed .feed-item .feed-date {
+    display: block;
+    position: relative;
+    color: #777;
+    text-transform: uppercase;
+    font-size: 12px;  /* Reduced font size */
+}
+
+.activity-feed .feed-item .feed-text {
+    color: #777;
+    position: relative;
+}
+
+.activity-feed .feed-item .feed-text a {
+    color: #333;
+    font-weight: 600;
+}
