@@ -1,0 +1,104 @@
+/* Full Section Styling */
+.section-doctor {
+    padding: 0;
+    margin: 0;
+}
+
+.full-section-swiper {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+.book {
+    padding-top: 70px;
+}
+
+.swipe1 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+    border: 50% solid #ffffff;
+}
+
+.doctor-row {
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    border: 1px solid #fff;
+}
+
+.see-more {
+    background-color: #50C878 !important;
+    border-color: #50C878 !important;
+    color: white !important;
+}
+
+.see-more:hover {
+    background-color: #62d2a2 !important;
+    border-color: #62d2a2 !important;
+    color: white !important;
+}
+
+.profile-widget {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the widget takes full height */
+}
+
+.profile-widget:hover {
+    transform: translateY(-5px);
+}
+
+.doc-img {
+    flex: 1; /* Allow image to take available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.doc-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.heart-icon {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 5px;
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.heart-icon:hover {
+    color: darkred;
+}
+
+.pro-content {
+    padding: 15px;
+    flex: 0 0 auto; /* Ensure content does not stretch */
+}
+
+.pro-content .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.verified {
+    color: #28a745;
+}
+
+.speciality {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
