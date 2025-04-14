@@ -1,0 +1,90 @@
+/* Main Footer Styling */
+.footer1 {
+    background-color: #2ea957; /* Dark green background */
+    color: #fff; /* White text for contrast */
+}
+
+.footer1 a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer1 a:hover {
+    color: #09e5ab;
+}
+
+/* Footer Top Section */
+.footer1 .footer-top {
+    padding: 40px 0;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.footer1 .footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer1 .footer-menu ul li {
+    margin-bottom: 10px;
+}
+
+.footer1 .footer-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.footer1 .footer-menu ul li a .icon {
+    font-size: 12px;
+}
+
+/* Footer Contact Info */
+.footer-contact-info p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-info i {
+    font-size: 16px;
+    color: #09e5ab;
+}
+
+/* Footer Bottom Section */
+.footer1 .footer-bottom {
+    border-top: 1px solid #0e783c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer1 .copyright-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer1 .policy-menu a {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-title {
+        font-size: 18px;
+    }
+    .footer1 .footer-menu ul li a,
+    .footer-contact-info p,
+    .footer1 .copyright-text p {
+        font-size: 13px;
+    }
+}
