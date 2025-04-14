@@ -91,9 +91,8 @@ const ViewAppointment = () => {
                             </div>
                             <div className="info-text">
                                 <h5>{`${data?.doctor?.firstName} ${data?.doctor?.lastName}`}</h5>
-                                <p>{data?.doctor?.specialization}</p>
-                                <p>{data?.doctor?.designation}</p>
-                                <p>{data?.doctor?.college}</p>
+                                <p>{data?.doctor?.services}</p>
+                                <p>{data?.doctor?.address}, {data?.doctor?.country}</p>
                             </div>
                         </div>
                     )}
@@ -112,12 +111,9 @@ const ViewAppointment = () => {
                             <h5>{`${data?.patient?.firstName} ${data?.patient?.lastName}`}</h5>
                             <p>Age: {moment().diff(moment(data?.patient?.dateOfBirth), 'years')}</p>
                             <p>Blood Group: {data?.patient?.bloodGroup}</p>
-                            <p>{`${data?.patient?.city}, ${data?.patient?.state}, ${data?.patient?.country}`}</p>
-
-                            <div className='mt-2'>
-                                <p>Reason for Visit: <span className='text-warning'>{data?.reasonForVisit}</span></p>
-                                <p className='text-warning'>{data?.description}</p>
-                            </div>
+                            <p>{`${data?.patient?.address}, ${data?.patient?.city}, ${data?.patient?.state}, ${data?.patient?.country}`}</p>
+                            <p>Reason for Visit : <span className='text-warning'>{data?.reasonForVisit}</span></p>
+                            <p>Description : <span className='text-warning'>{data?.description}</span></p>
                         </div>
                     </div>
                 </Card>

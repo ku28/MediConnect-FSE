@@ -8,7 +8,7 @@ const TopHeader = () => {
             <div className="container d-flex justify-content-between">
                 <div className="contact-info d-flex align-items-center">
                     <FaEnvelope className='contact-icon'/> <a href="mailto:name@example.com">mediconnect@gmail.com</a>
-                    <FaPhoneAlt className='contact-icon'/> <a href="tel:123456789">+91 76231-45201</a> 
+                    <FaPhoneAlt className='contact-icon'/> <a href="tel:123456789">+91 XXXXX-XXXXX</a> 
                 </div>
                 <div className="d-none d-lg-flex social-links align-items-center">
                     <a href="https://www.linkedin.com/" target='_blank' rel="noreferrer" className="linkedin"><FaLinkedin /></a>

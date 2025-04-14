@@ -57,8 +57,6 @@ const AppointmentPage = () => {
   }, [selectValue, isCheck]);
   
   const handleConfirmSchedule = () => {
-    // console.log("here");
-    
     const obj = {};
     obj.patientInfo = {
       firstName: selectValue.firstName,
@@ -66,6 +64,10 @@ const AppointmentPage = () => {
       email: selectValue.email,
       phone: selectValue.phone,
       patientId: role !== '' && role === 'patient' ? data.id : undefined,
+      reasonForVisit: selectValue.reasonForVisit,
+      description: selectValue.description,
+      address: selectValue.address,
+      patientType: role !== '' && role === 'patient' ? 'existing' : 'new',
       scheduleDate: selectedDate,
       scheduleTime: selectTime,
     }

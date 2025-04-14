@@ -5,7 +5,6 @@ const SelectDateAndTime = ({ content, handleDateChange, disabledDateTime, select
     return (
         <div style={{ marginTop: '5rem' }}>
             <div className="doctor-name hover-effect">
-                
                 <h5 className='text-title'>Selected Doctor</h5>
                 {content}
             </div>

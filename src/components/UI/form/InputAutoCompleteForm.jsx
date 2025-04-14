@@ -1,26 +1,30 @@
 import { AutoComplete } from 'antd';
 import { useState } from 'react';
-const mockVal = (str, repeat = 1) => ({
-    value: str.repeat(repeat),
-});
 
-const InputAutoCompleteForm = ({ id, medicineList,setMedicineList, defaultValue=undefined }) => {
+const InputAutoCompleteForm = ({ id, medicineList, setMedicineList, defaultValue = undefined }) => {
     const [options, setOptions] = useState([]);
-    const getPanelValue = (searchText) => !searchText ? [] : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)];
 
     const onChange = (e) => {
-        const findIndex = medicineList.find((item) => item.id === id);
-        const updateItem = {...findIndex, medicine: e}
+        const existingItem = medicineList.find((item) => item.id === id);
+        const updateItem = existingItem ? { ...existingItem, medicine: e } : { id, medicine: e };
         setMedicineList(prev => {
-            const indexToUpdate = prev.findIndex(item => item.id === id)
-            if(indexToUpdate !== -1){
-                const updateArray = [...prev];
-                updateArray[indexToUpdate] = updateItem;
-                return updateArray
-            }else{
-                return [...prev, updateItem]
+            const indexToUpdate = prev.findIndex(item => item.id === id);
+            if (indexToUpdate !== -1) {
+                const updatedArray = [...prev];
+                updatedArray[indexToUpdate] = updateItem;
+                return updatedArray;
+            } else {
+                return [...prev, updateItem];
             }
-        })
+        });
+    };
+
+    const onSearch = (text) => {
+        const medicines = ['Paracetamol', 'Ibuprofen', 'Aspirin', 'Amoxicillin'];
+        const filtered = medicines
+            .filter((med) => med.toLowerCase().includes(text.toLowerCase()))
+            .map((med) => ({ value: med }));
+        setOptions(filtered);
     };
 
     return (
@@ -28,12 +32,12 @@ const InputAutoCompleteForm = ({ id, medicineList,setMedicineList, defaultValue=
             options={options}
             style={{ width: '100%' }}
             onChange={onChange}
-            onSearch={(text) => setOptions(getPanelValue(text))}
+            onSearch={onSearch}
             size='large'
             placeholder="Medicine..."
             defaultValue={defaultValue}
         />
-    )
-}
+    );
+};
 
 export default InputAutoCompleteForm;

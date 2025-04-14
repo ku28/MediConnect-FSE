@@ -5,7 +5,7 @@ import './index.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Empty, Button, message, Steps } from 'antd';
 import { useGetDoctorQuery } from '../../../redux/api/doctorApi';
-import { FaArchway } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
 import { useGetAppointmentTimeQuery } from '../../../redux/api/timeSlotApi';
 import moment from 'moment';
 import SelectDateAndTime from '../SelectDateAndTime';
@@ -98,11 +98,16 @@ const DoctorBooking = () => {
         <>
             <div className="booking-doc-img my-3 mb-3 rounded">
                 <Link to={`/doctors/${data?.id}`}>
-                    <img src={img} alt="" />
+                    <img src={data?.img} alt="Doctor" />
                 </Link>
                 <div className='text-start'>
-                    <Link to={`/doctors/${data?.id}`} style={{ textDecoration: 'none' }}>Dr. {data?.firstName + ' ' + data?.lastName}</Link>
-                    <p className="form-text mb-0"><FaArchway /> {data?.specialization + ',' + data?.experienceHospitalName}</p>
+                    <Link to={`/doctors/${data?.id}`} style={{ textDecoration: 'none' }}>
+                        Dr. {data?.firstName} {data?.lastName}
+                    </Link>
+                    <p className="form-text mb-0">{data?.services}</p>
+                    <p className="form-text mb-0">
+                        <FaLocationArrow /> {data?.address}, {data?.country}
+                    </p>
                 </div>
             </div>
         </>;

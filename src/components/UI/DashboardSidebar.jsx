@@ -17,6 +17,20 @@ import {
 const DashboardSidebar = () => {
     const { data, role } = useAuthCheck();
 
+    const calculateAge = (dateOfBirth) => {
+        const dob = new Date(dateOfBirth);
+        const today = new Date();
+    
+        let age = today.getFullYear() - dob.getFullYear();
+        const m = today.getMonth() - dob.getMonth();
+    
+        if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+            age--;
+        }
+    
+        return age;
+    };
+
     return (
         <div className="profile-sidebar p-3 rounded">
             <div className="p-2 text-center border-bottom">
@@ -25,9 +39,9 @@ const DashboardSidebar = () => {
                         <div className="profile-info text-center">
                             <Link to={'/'}><img src={data?.img ? data?.img : img} alt="" /></Link>
                             <div className='profile-details'>
-                                <h5 className='mb-0'>{data?.firstName + " " + data?.lastName}</h5>
+                                <h5 className='mb-0 text-center'>{data?.firstName + " " + data?.lastName}</h5>
                                 <div>
-                                    <p className="mb-0">{data?.designation}</p>
+                                    <p className="mb-0 text-center">{data?.services}</p>
                                 </div>
                             </div>
                         </div>
@@ -37,8 +51,10 @@ const DashboardSidebar = () => {
                             <div className='profile-details'>
                                 <h5 className='mb-0'>{data?.firstName + " " + data?.lastName}</h5>
                                 <div className='mt-2'>
-                                    <p className=' form-text m-0'>DOB, Age</p>
-                                    <p className=' form-text m-0'>location</p>
+                                    <p className=' form-text m-0'>
+                                        {data?.dateOfBirth ? new Date(data?.dateOfBirth).toLocaleDateString() : ''}, {data?.dateOfBirth ? `${calculateAge(data.dateOfBirth)} years` : ''}
+                                    </p>
+                                    <p className=' form-text m-0'>{data?.address}, {data?.city}, {data?.country}</p>
                                     <p className=' form-text m-0'>{data?.email}</p>
                                 </div>
                             </div>

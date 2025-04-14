@@ -58,11 +58,11 @@ const Footer = () => {
 								<div className="footer-contact-info">
 									<p>
 										<i className="fas fa-map-marker-alt"></i>
-										123 Health Street, MediCity, Gurugram
+										Chitkara University, Rajpura
 									</p>
 									<p>
 										<i className="fas fa-phone-alt"></i>
-										+91 76231-45201
+										+91 XXXXX-XXXXX
 									</p>
 									<p>
 										<i className="fas fa-envelope"></i>

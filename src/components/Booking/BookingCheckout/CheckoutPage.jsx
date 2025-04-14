@@ -16,12 +16,8 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
 
     return (
         <div className="container mt-5">
-             
-
             <style>
                 {`
-
-
                     /* Image Hover Effect (Zoom and Brightness) */
                     .booking-doc-img img {
                         transition: transform 0.5s ease, filter 0.3s ease;
@@ -153,7 +149,7 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
                                     onChange={(e) => handleChange(e)}
                                     checked={paymentMethod === 'paypal'}
                                 />
-                               
+                                
                                 Paypal
                             </div>
                             <div>
@@ -163,7 +159,7 @@ const CheckoutPage = ({ handleChange, selectValue, isCheck, setIsChecked, data, 
                                     onChange={(e) => handleChange(e)}
                                     checked={paymentMethod === 'payoneer'}
                                 />
-                              
+                                
                                 Payoneer
                             </div>
                         </div>

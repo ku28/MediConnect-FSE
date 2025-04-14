@@ -34,7 +34,7 @@ const InfoPage = () => {
                                     <div className="icon-box mt-4 mt-xl-0">
                                         <FaHeadset className="icon"/>
                                         <h4>Emegency Cases</h4>
-                                        <h6 className='text-secondary'>+91 76231-45201</h6>
+                                        <h6 className='text-secondary'>+91 XXXXX-XXXXX</h6>
                                         <p>MediConnect ensures quick access to medical professionals in emergency cases, providing instant appointment scheduling. Get immediate care with real-time notifications and support when every second counts.</p>
                                     </div>
                                 </div>
