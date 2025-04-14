@@ -41,7 +41,7 @@ const Contact = () => {
                                     <FaLocationArrow className='icon' />
                                     <div className="ms-3">
                                         <h4>Location:</h4>
-                                        <p>123 Health Street, MediCity,Gurugram</p>
+                                        <p>Chitkara University, Rajpura</p>
                                     </div>
                                 </div>
 

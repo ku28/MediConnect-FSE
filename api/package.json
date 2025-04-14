@@ -18,6 +18,8 @@
   },
   "author": "kushagra",
   "dependencies": {
+    "@google-apps/meet": "^0.6.0",
+    "@google-cloud/local-auth": "^2.1.0",
     "@prisma/client": "^6.6.0",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.19.0",
