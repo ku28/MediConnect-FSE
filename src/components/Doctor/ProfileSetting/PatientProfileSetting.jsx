@@ -15,6 +15,7 @@ const PatientProfileSetting = () => {
     const { register, handleSubmit } = useForm({});
     const [userId, setUserId] = useState('');
     const [selectBloodGroup, setSelectBloodGroup] = useState('');
+    const [selectGender, setSelectGender] = useState('');
     const [selectValue, setSelectValue] = useState({})
     const [updatePatient, { isSuccess, isError, error, isLoading }] = useUpdatePatientMutation();
     const [date, setDate] = useState(null);
@@ -33,6 +34,13 @@ const PatientProfileSetting = () => {
     }, [data]);
 
     useEffect(() => {
+        if (data) {
+            setUserId(data.id)
+            setSelectGender(data?.gender)
+        }
+    }, [data]);
+
+    useEffect(() => {
         if (!isLoading && isError) {
             message.error(error?.data?.message)
         }
@@ -45,6 +53,9 @@ const PatientProfileSetting = () => {
         setSelectValue({ ...selectValue, [e.target.name]: e.target.value })
         if (e.target.name === 'bloodGroup') {
             setSelectBloodGroup(e.target.value);
+        }
+        if (e.target.name === 'gender') {
+            setSelectGender(e.target.value);
         }
     }
 
@@ -123,11 +134,11 @@ const PatientProfileSetting = () => {
                     <div className="col-md-6">
                         <div className="form-group mb-2">
                             <label>Gender</label>
-                            <select className="form-control select" onChange={handleChange} name='gender'>
+                            <select className="form-control select" onChange={handleChange} name='gender' value={selectGender}>
                                 <option value={''}>Select</option>
-                                <option className='text-capitalize'>male</option>
-                                <option className='text-capitalize'>female</option>
-                                <option className='text-capitalize'>other</option>
+                                <option className='text-capitalize'>Male</option>
+                                <option className='text-capitalize'>Female</option>
+                                <option className='text-capitalize'>Other</option>
                             </select>
                         </div>
                     </div>

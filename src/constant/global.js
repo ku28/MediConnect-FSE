@@ -28,7 +28,8 @@ export const doctorSpecialistArray = [
     { id: 8, value: "Endocrinologist" },
     { id: 9, value: "Gastroenterologist" },
     { id: 10, value: "Pulmonologist" },
-    { id: 11, value: "Orthopedic" }
+    { id: 11, value: "Orthopedic" },
+    { id: 12, value: "Therapist" }
 ]
 
 export const doctorSpecialistOptions = doctorSpecialistArray.map(data => {
