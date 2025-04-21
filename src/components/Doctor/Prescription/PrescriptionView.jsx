@@ -36,8 +36,8 @@ const PrescriptionView = () => {
             key: 'duration',
             render: function (data) {
                 const duratinDate = data.duration.split(',');
-                const endDate = moment(duratinDate[0]);
-                const startDate = moment(duratinDate[1]);
+                const endDate = moment(duratinDate[1]);
+                const startDate = moment(duratinDate[0]);
                 const getDiffrent = endDate.diff(startDate, "days");
                 return (
                     <>{getDiffrent} days</>
@@ -88,13 +88,12 @@ const PrescriptionView = () => {
                                     <div className="invoice-details invoice-details-two">
                                         <div className="d-flex justify-content-between patient-name">
                                             <div>
-                                                <h5 style={{ fontWeight: 700 }}>Patient Name : {data?.patient?.firstName + ' ' + data?.patient?.lastName}</h5>
-                                                <p className="form-text">Address: {data?.patient?.address}, {data?.patient?.city}, {data?.patient?.country}</p>
+                                                <h4 style={{ fontWeight: 700 }}>Patient Name : {data?.patient?.firstName + ' ' + data?.patient?.lastName}</h4>
+                                                <h5 className="form-text">Address: {data?.patient?.address}, {data?.patient?.city}</h5>
                                             </div>
                                             <div>
                                                 <p>Sex : {data?.patient?.gender}</p>
                                                 <p>Age : {moment().diff(data?.patient?.dateOfBirth, 'years')}</p>
-                                                <p>Weight : {data?.patient?.weight}</p>
                                             </div>
                                         </div>
                                     </div>

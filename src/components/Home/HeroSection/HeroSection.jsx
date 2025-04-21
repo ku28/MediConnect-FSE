@@ -1,8 +1,11 @@
 import React from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
+import useAuthCheck from '../../../redux/hooks/useAuthCheck';
 
 const HeroSection = () => {
+    const { role } = useAuthCheck();
+    
     return (
         <section id="hero" className="d-flex align-items-center hero-text">
             <div className="container d-flex flex-column-reverse flex-md-row align-items-center">
@@ -33,7 +36,7 @@ const HeroSection = () => {
                     </p>
                     <div className="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
                         <Link 
-                            to={'/doctors'} 
+                            to={'/login'} 
                             style={{
                                 display: 'inline-block',
                                 padding: '12px 25px',
@@ -51,7 +54,7 @@ const HeroSection = () => {
                         >
                             Get Started
                         </Link>
-                        <Link 
+                        { role === 'patient' && (<Link 
                             to={'/track-appointment'} 
                             style={{
                                 display: 'inline-block',
@@ -76,7 +79,33 @@ const HeroSection = () => {
                             }}
                         >
                             Track Appointment
-                        </Link>
+                        </Link>)}
+                        { role === 'doctor' && (<Link 
+                            to={'/dashboard/appointments'} 
+                            style={{
+                                display: 'inline-block',
+                                padding: '12px 25px',
+                                fontSize: '1rem',
+                                fontWeight: '600',
+                                textDecoration: 'none',
+                                borderRadius: '25px',
+                                textTransform: 'uppercase',
+                                color: '#50C878',
+                                backgroundColor: '#fff',
+                                border: '2px solid #50C878',
+                                transition: 'all 0.3s ease'
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.backgroundColor = '#50C878';
+                                e.target.style.color = '#fff';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.backgroundColor = '#fff';
+                                e.target.style.color = '#50C878';
+                            }}
+                        >
+                            View Appointments
+                        </Link>)}
                     </div>
                 </div>
             </div>
